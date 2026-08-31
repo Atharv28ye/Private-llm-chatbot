@@ -32,7 +32,6 @@ No OpenAI API. No Anthropic API. No third-party LLM calls.
 
 ### 1. Clone
 
-``bash
 git clone https://github.com/YOUR_USERNAME/private-llm.git
 cd private-llm
 
