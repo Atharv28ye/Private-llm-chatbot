@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Model files
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+
+# Hugging Face cache
+.cache/
+huggingface_cache/
+transformers_cache/
+
+# Docker
+docker-compose.override.yml
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Python test/cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

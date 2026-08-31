@@ -1,0 +1,29 @@
+services:
+  private-llm:
+    build:
+      context: .
+    container_name: private-llm
+    ports:
+      - "80:80"
+      - "8000:8000"
+    environment:
+      MODEL_ID: Qwen/Qwen2.5-1.5B-Instruct-AWQ
+      GPU_UTIL: "0.60"
+      MAX_MODEL_LEN: "256"
+      VLLM_HOST: "http://127.0.0.1:8000"
+      VLLM_PORT: "8000"
+      STREAMLIT_PORT: "80"
+    volumes:
+      - huggingface-cache:/root/.cache/huggingface
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
+    restart: unless-stopped
+volumes:
+  huggingface-cache:

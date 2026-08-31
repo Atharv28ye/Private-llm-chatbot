@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+transformers
+torch
+accelerate
+sentencepiece
+safetensors
+streamlit
+requests
